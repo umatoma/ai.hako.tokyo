@@ -20,8 +20,8 @@
 
 | やりたいこと | 読むファイル |
 |---|---|
-| 新規・既存リポに Claude Code を導入する | [`playbooks/01-claude-codeを導入する.md`](playbooks/01-claude-codeを導入する.md) |
-| `CLAUDE.md` を書く・育てる | [`playbooks/02-claude-mdを書く.md`](playbooks/02-claude-mdを書く.md) |
+| 新規・既存リポに Claude Code を導入する | [`playbooks/software-development/01-claude-codeを導入する.md`](playbooks/software-development/01-claude-codeを導入する.md) |
+| `CLAUDE.md` を書く・育てる | [`playbooks/software-development/02-claude-mdを書く.md`](playbooks/software-development/02-claude-mdを書く.md) |
 
 ### 2. 判断する（使い分け・原則）
 
@@ -30,7 +30,7 @@
 | 判断したいこと | 読むファイル |
 |---|---|
 | Claude Code / Chat / Cowork のどれをいつ使うか | [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md) |
-| Idea / MVP / Launch / Scale の段階別に AI で何を優先するか | [`topics/ai-native-startup-lifecycle.md`](topics/ai-native-startup-lifecycle.md) |
+| Idea / MVP / Launch / Scale の段階別に AI で何を優先するか | [`topics/software-development/ai-native-startup-lifecycle.md`](topics/software-development/ai-native-startup-lifecycle.md) |
 | Claude Code の出力を HTML / Markdown で使い分ける | [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md#claude-code-出力の選び方html-vs-markdown) |
 
 ### 3. 原典で確認する
@@ -48,7 +48,7 @@
 
 | やりたいこと | 読むファイル |
 |---|---|
-| 自分が見つけた記事・PDF をこのリポに取り込む | [`playbooks/03-外部情報を取り込む.md`](playbooks/03-外部情報を取り込む.md) |
+| 自分が見つけた記事・PDF をこのリポに取り込む | [`playbooks/knowledge-base/01-外部情報を取り込む.md`](playbooks/knowledge-base/01-外部情報を取り込む.md) |
 | 現在何があるか一覧で見る | [`INDEX.md`](INDEX.md) |
 
 ## ディレクトリの役割
@@ -63,7 +63,7 @@
 
 このリポは「Claude Code に編集させる」ことを前提に設計されている。新しい記事・PDF を取り込むときは:
 
-1. [`playbooks/03-外部情報を取り込む.md`](playbooks/03-外部情報を取り込む.md) の手順に沿って `sources/` に保存（必ず日本語訳）
+1. [`playbooks/knowledge-base/01-外部情報を取り込む.md`](playbooks/knowledge-base/01-外部情報を取り込む.md) の手順に沿って `sources/` に保存（必ず日本語訳）
 2. 既存の `frameworks/` / `topics/` を更新するか、新規ノートを `_templates/` から作る
 3. [`INDEX.md`](INDEX.md) に追記
 

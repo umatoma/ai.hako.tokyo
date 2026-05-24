@@ -87,7 +87,7 @@ related_sources:
 - **長すぎる `CLAUDE.md`**: 数百行になったら、トピック別に分割し（`docs/architecture.md` 等）、`CLAUDE.md` からはリンクだけにする。Claude Code が毎セッション全部読むコスト分の価値があるか考える。
 - **コードに書ける情報を `CLAUDE.md` に書く**: 関数のシグネチャ説明・型定義の言い換えなど。コードと docstring に書く。
 - **「やれ」だけで「なぜ」が無い禁則**: 「`any` を使うな」だけ書いても破る理由を考えない。Founder's Playbook の発想だと、なぜ＝過去の事故 / 制約 / 強い好み を 1 行添える。
-- **規約と現状の混在**: ルール（規約）と「現在のリポにあるもの」（現状）は別ファイルにする。このリポでは [`INDEX.md`](../INDEX.md) が現状を担当している。
+- **規約と現状の混在**: ルール（規約）と「現在のリポにあるもの」（現状）は別ファイルにする。このリポでは [`INDEX.md`](../../INDEX.md) が現状を担当している。
 - **PR ごとの大改造**: `CLAUDE.md` を頻繁に書き換えると、過去セッションが守っていた前提が崩れる。追記主体・削除は慎重に。
 
 ## チェックリスト（セルフレビュー）
@@ -105,5 +105,5 @@ related_sources:
 ## 関連
 
 - [`01-claude-codeを導入する.md`](./01-claude-codeを導入する.md) — `CLAUDE.md` を含む初期セットアップ全体
-- [`frameworks/anthropic-claude-code.md`](../frameworks/anthropic-claude-code.md) — Claude Code を「永続的協働者」として使うための原則
-- [`sources/anthropic/docs/the-founders-playbook.md`](../sources/anthropic/docs/the-founders-playbook.md) — 原典（MVP 章）
+- [`frameworks/anthropic-claude-code.md`](../../frameworks/anthropic-claude-code.md) — Claude Code を「永続的協働者」として使うための原則
+- [`sources/anthropic/docs/the-founders-playbook.md`](../../sources/anthropic/docs/the-founders-playbook.md) — 原典（MVP 章）

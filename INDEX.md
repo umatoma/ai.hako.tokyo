@@ -14,8 +14,8 @@ README.md と同じ 4 フェーズで整理（**まず始める / 判断する /
 
 | やりたいこと | 読むもの |
 |---|---|
-| 新しいリポに Claude Code を導入する | [`playbooks/01-claude-codeを導入する.md`](playbooks/01-claude-codeを導入する.md) |
-| `CLAUDE.md` を書く / 育てる | [`playbooks/02-claude-mdを書く.md`](playbooks/02-claude-mdを書く.md) |
+| 新しいリポに Claude Code を導入する | [`playbooks/software-development/01-claude-codeを導入する.md`](playbooks/software-development/01-claude-codeを導入する.md) |
+| `CLAUDE.md` を書く / 育てる | [`playbooks/software-development/02-claude-mdを書く.md`](playbooks/software-development/02-claude-mdを書く.md) |
 
 ### 2. 判断する（使い分け・原則）
 
@@ -23,15 +23,15 @@ README.md と同じ 4 フェーズで整理（**まず始める / 判断する /
 |---|---|
 | Claude のサーフェス（Chat/Cowork/Code）を使い分ける | [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md) |
 | Claude Code の出力を HTML / Markdown で使い分ける | [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md#claude-code-出力の選び方html-vs-markdown) |
-| アイデア / MVP / Launch / Scale 段階で何を優先するか | [`topics/ai-native-startup-lifecycle.md`](topics/ai-native-startup-lifecycle.md) |
-| スコープクリープを防ぐ | [`topics/ai-native-startup-lifecycle.md`](topics/ai-native-startup-lifecycle.md) MVP 章 ＋ [`playbooks/01-claude-codeを導入する.md`](playbooks/01-claude-codeを導入する.md) ステップ 3 |
-| エージェント時代の検証・確証バイアス対策 | [`topics/ai-native-startup-lifecycle.md`](topics/ai-native-startup-lifecycle.md) Idea 章 ＋ [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md) の「やってはいけないこと」 |
+| アイデア / MVP / Launch / Scale 段階で何を優先するか | [`topics/software-development/ai-native-startup-lifecycle.md`](topics/software-development/ai-native-startup-lifecycle.md) |
+| スコープクリープを防ぐ | [`topics/software-development/ai-native-startup-lifecycle.md`](topics/software-development/ai-native-startup-lifecycle.md) MVP 章 ＋ [`playbooks/software-development/01-claude-codeを導入する.md`](playbooks/software-development/01-claude-codeを導入する.md) ステップ 3 |
+| エージェント時代の検証・確証バイアス対策 | [`topics/software-development/ai-native-startup-lifecycle.md`](topics/software-development/ai-native-startup-lifecycle.md) Idea 章 ＋ [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md) の「やってはいけないこと」 |
 
 ### 3. このリポを育てる（貢献）
 
 | やりたいこと | 読むもの |
 |---|---|
-| 新しい記事・PDF をこのリポに取り込む | [`playbooks/03-外部情報を取り込む.md`](playbooks/03-外部情報を取り込む.md) |
+| 新しい記事・PDF をこのリポに取り込む | [`playbooks/knowledge-base/01-外部情報を取り込む.md`](playbooks/knowledge-base/01-外部情報を取り込む.md) |
 
 ---
 
@@ -70,15 +70,15 @@ README.md と同じ 4 フェーズで整理（**まず始める / 判断する /
 
 ## topics/ — ベンダー横断の整理ノート
 
-- [`ai-native-startup-lifecycle.md`](topics/ai-native-startup-lifecycle.md) — 4 段階モデル（Idea/MVP/Launch/Scale）の俯瞰。現状は Anthropic 単一視点
+- [`ai-native-startup-lifecycle.md`](topics/software-development/ai-native-startup-lifecycle.md) — 4 段階モデル（Idea/MVP/Launch/Scale）の俯瞰。現状は Anthropic 単一視点
 
 ---
 
 ## playbooks/ — 実践用手順
 
-- [`01-claude-codeを導入する.md`](playbooks/01-claude-codeを導入する.md) — Claude Code を新規・既存リポに導入するときの初期セットアップ手順
-- [`02-claude-mdを書く.md`](playbooks/02-claude-mdを書く.md) — `CLAUDE.md` の書き方・育て方・アンチパターン
-- [`03-外部情報を取り込む.md`](playbooks/03-外部情報を取り込む.md) — ブログ・PDF を `sources/` に取り込む手順とチェックリスト
+- [`01-claude-codeを導入する.md`](playbooks/software-development/01-claude-codeを導入する.md) — Claude Code を新規・既存リポに導入するときの初期セットアップ手順
+- [`02-claude-mdを書く.md`](playbooks/software-development/02-claude-mdを書く.md) — `CLAUDE.md` の書き方・育て方・アンチパターン
+- [`03-外部情報を取り込む.md`](playbooks/knowledge-base/01-外部情報を取り込む.md) — ブログ・PDF を `sources/` に取り込む手順とチェックリスト
 
 ---
 
