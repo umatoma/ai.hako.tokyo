@@ -1,6 +1,6 @@
 # ai.hako.tokyo
 
-**Coding Agent**（Claude Code など）と、それを活かす**開発手法・フレームワーク**（GitHub Spec Kit / AWS AI-DLC など）を使ったソフトウェア開発を、自分たちの仕事に**実際に適用する**ためのナレッジベース。
+AI を活用した**ソフトウェア開発**および**各種業務**（デザイン・マーケティング・営業・人事 など）を、自分たちの仕事に**実際に適用する**ためのナレッジベース。**Coding Agent**（Claude Code）、**開発手法・フレームワーク**（GitHub Spec Kit、AWS AI-DLC）、**個別ツール**（Dify、n8n、NotebookLM、Gemini、NanoBanana など）を横断的に扱う。
 
 ## このリポジトリで得られるもの
 
@@ -53,10 +53,10 @@
 
 ## ディレクトリの役割
 
-- [`sources/`](sources/) — 一次情報の日本語訳（ベンダー別）。引用の出典として使う
-- [`frameworks/`](frameworks/) — ベンダー別の整理ノート（1 ベンダー＝ 1 ノート基本）
-- [`topics/`](topics/) — ベンダー横断のトピック整理
-- [`playbooks/`](playbooks/) — 「明日から使う」実践レシピ
+- [`sources/`](sources/) — 一次情報の日本語訳（ベンダー/ツール別）。引用の出典として使う
+- [`frameworks/`](frameworks/) — ベンダー/ツール別の整理ノート（1 ベンダー＝ 1 ノート基本）
+- [`topics/`](topics/) — **業務領域別**のベンダー横断トピック（`software-development/` `design/` `marketing/` `sales/` `hr/` `cross/`）
+- [`playbooks/`](playbooks/) — **業務領域別**の実践レシピ。リポ自体の運用は `playbooks/knowledge-base/`
 - [`_templates/`](_templates/) — 新規ノートのコピー元
 
 ## 貢献する（自分が学んだことを追加する）
@@ -71,4 +71,22 @@
 
 ## ステータス
 
-現状は Anthropic 系の取り込みが中心。GitHub Spec Kit と AWS AI-DLC は枠（`sources/github/spec-kit/`, `sources/aws/ai-dlc/`）だけ用意済みで、取り込み待ち。ベンダー横断の比較が育つほど [`topics/`](topics/) の価値が出る設計。
+### 業務領域別の進捗
+
+| 領域 | 状態 |
+|---|---|
+| software-development | 稼働中（Anthropic 系の取り込みベース） |
+| design / marketing / sales / hr / cross | 枠のみ（README で意図を明示済み、コンテンツ待ち） |
+
+### ベンダー/ツール別の進捗
+
+| 対象 | 状態 |
+|---|---|
+| Anthropic（Claude / Claude Code） | 取り込み済み |
+| Google（Gemini / NotebookLM / NanoBanana） | 枠のみ |
+| GitHub Spec Kit | 枠のみ |
+| AWS AI-DLC | 枠のみ |
+| Dify | 枠のみ |
+| n8n | 枠のみ |
+
+ベンダー横断の比較・業務領域別のノートが育つほど [`topics/`](topics/) [`playbooks/`](playbooks/) の価値が出る設計。

@@ -48,6 +48,12 @@ README.md と同じ 4 フェーズで整理（**まず始める / 判断する /
 
 - [`The Founder's Playbook (PDF 全 36 ページ Markdown 変換版)`](sources/anthropic/docs/the-founders-playbook.md) — Idea / MVP / Launch / Scale の 4 段階モデルと AI 活用
 
+### Google
+
+（未取り込み）
+
+- 想定: `sources/google/` に Gemini / NotebookLM / NanoBanana 関連を追加予定
+
 ### GitHub
 
 （未取り込み）
@@ -60,25 +66,52 @@ README.md と同じ 4 フェーズで整理（**まず始める / 判断する /
 
 - 想定: `sources/aws/ai-dlc/` に AWS AI Development Lifecycle 関連を追加予定
 
+### Dify
+
+（未取り込み）
+
+- 想定: `sources/dify/` に Dify 関連ドキュメント・ブログを追加予定
+
+### n8n
+
+（未取り込み）
+
+- 想定: `sources/n8n/` に n8n 関連ドキュメント・ブログを追加予定
+
 ---
 
-## frameworks/ — ベンダー別の整理ノート
+## frameworks/ — ベンダー/ツール別の整理ノート
 
 - [`anthropic-claude-code.md`](frameworks/anthropic-claude-code.md) — Chat / Claude Cowork / Claude Code のサーフェス選択、HTML 出力の指針、CLAUDE.md 運用のお作法
 
 ---
 
-## topics/ — ベンダー横断の整理ノート
+## topics/ — 業務領域別のベンダー横断ノート
+
+### software-development/
 
 - [`ai-native-startup-lifecycle.md`](topics/software-development/ai-native-startup-lifecycle.md) — 4 段階モデル（Idea/MVP/Launch/Scale）の俯瞰。現状は Anthropic 単一視点
 
+### design / marketing / sales / hr / cross
+
+（コンテンツ未追加 / 各ディレクトリの README で扱う範囲を明示）
+
 ---
 
-## playbooks/ — 実践用手順
+## playbooks/ — 業務領域別の実践手順
+
+### software-development/
 
 - [`01-claude-codeを導入する.md`](playbooks/software-development/01-claude-codeを導入する.md) — Claude Code を新規・既存リポに導入するときの初期セットアップ手順
 - [`02-claude-mdを書く.md`](playbooks/software-development/02-claude-mdを書く.md) — `CLAUDE.md` の書き方・育て方・アンチパターン
-- [`03-外部情報を取り込む.md`](playbooks/knowledge-base/01-外部情報を取り込む.md) — ブログ・PDF を `sources/` に取り込む手順とチェックリスト
+
+### knowledge-base/ — このリポ自体の運用
+
+- [`01-外部情報を取り込む.md`](playbooks/knowledge-base/01-外部情報を取り込む.md) — ブログ・PDF を `sources/` に取り込む手順とチェックリスト
+
+### design / marketing / sales / hr
+
+（コンテンツ未追加 / 各ディレクトリの README に想定例を記載）
 
 ---
 
@@ -101,5 +134,6 @@ README.md と同じ 4 フェーズで整理（**まず始める / 判断する /
 
 - 一次情報: 3 件（Anthropic ブログ 2 / PDF 1）
 - 二次情報: 2 件（frameworks 1 / topics 1）
-- プレイブック: 3 件（setup / claude-md / ingestion）
-- 未取り込みベンダー: GitHub Spec Kit / AWS AI-DLC
+- プレイブック: 3 件（software-development 2 / knowledge-base 1）
+- 業務領域: software-development が稼働、design/marketing/sales/hr/cross は枠のみ
+- ベンダー/ツール: Anthropic が稼働、Google/GitHub/AWS/Dify/n8n は枠のみ
