@@ -2,12 +2,17 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+このファイルは**このリポを編集する人 / Claude Code 向けの規約**。「どこに何を置くか」「どう書くか」のルールに特化している。
+
+リポジトリを**読みたい / 使いたい**訪問者は [`README.md`](README.md) から始めること（「やりたいこと別」リンクが入口）。
+
 ## このリポジトリの目的
 
 Coding Agent（Claude Code、GitHub Spec Kit、AWS AI-DLC など）を活用したソフトウェア開発に関する知見を蓄積・整理するナレッジベース。インターネット上の重要な情報源をローカルに取り込み、整理・要約したノートと並べて管理する。
 
-## まず読むファイル
+## まず読むファイル（編集者向け）
 
+- [`README.md`](README.md) — 訪問者向け入口（編集する前にどう使われるか把握）
 - [`INDEX.md`](INDEX.md) — 現在リポジトリに何があるかの一覧（規約より「現状」を知りたいときはこちら）
 - 本ファイル `CLAUDE.md` — どこに何を置くかの規約
 - [`playbooks/ingest-source-from-web.md`](playbooks/ingest-source-from-web.md) — 新規取り込みの実践手順

@@ -6,6 +6,21 @@
 
 ---
 
+## ユースケース別（やりたいこと → 読むもの）
+
+| やりたいこと | 読むもの |
+|---|---|
+| 新しいリポに Claude Code を導入する | [`playbooks/setup-claude-code-in-new-repo.md`](playbooks/setup-claude-code-in-new-repo.md) |
+| `CLAUDE.md` を書く / 育てる | [`playbooks/write-effective-claude-md.md`](playbooks/write-effective-claude-md.md) |
+| Claude のサーフェス（Chat/Cowork/Code）を使い分ける | [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md) |
+| Claude Code の出力を HTML / Markdown で使い分ける | [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md) と [元記事](sources/anthropic/blog/2026-05-20-unreasonable-effectiveness-of-html.md) |
+| アイデア / MVP / Launch / Scale 段階で何を優先するか | [`topics/ai-native-startup-lifecycle.md`](topics/ai-native-startup-lifecycle.md) |
+| スコープクリープを防ぐ | [`topics/ai-native-startup-lifecycle.md`](topics/ai-native-startup-lifecycle.md) MVP 章 ＋ [`playbooks/setup-claude-code-in-new-repo.md`](playbooks/setup-claude-code-in-new-repo.md) ステップ 3 |
+| エージェント時代の検証・確証バイアス対策 | [`topics/ai-native-startup-lifecycle.md`](topics/ai-native-startup-lifecycle.md) Idea 章 ＋ [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md) の「やってはいけないこと」 |
+| 新しい記事・PDF をこのリポに取り込む | [`playbooks/ingest-source-from-web.md`](playbooks/ingest-source-from-web.md) |
+
+---
+
 ## sources/ — 一次情報（日本語訳）
 
 ### Anthropic
@@ -47,6 +62,8 @@
 
 ## playbooks/ — 実践用手順
 
+- [`setup-claude-code-in-new-repo.md`](playbooks/setup-claude-code-in-new-repo.md) — Claude Code を新規・既存リポに導入するときの初期セットアップ手順
+- [`write-effective-claude-md.md`](playbooks/write-effective-claude-md.md) — `CLAUDE.md` の書き方・育て方・アンチパターン
 - [`ingest-source-from-web.md`](playbooks/ingest-source-from-web.md) — ブログ・PDF を `sources/` に取り込む手順とチェックリスト
 
 ---
@@ -61,8 +78,8 @@
 
 ## 規約・運用
 
-- [`CLAUDE.md`](CLAUDE.md) — ディレクトリ役割、frontmatter、PDF 取り扱い、言語ポリシー
-- [`README.md`](README.md) — リポジトリ紹介（短く）
+- [`README.md`](README.md) — 訪問者向け入口（やりたいこと別のリンク集）
+- [`CLAUDE.md`](CLAUDE.md) — 編集者（人 / Claude Code）向けの規約: ディレクトリ役割、frontmatter、PDF 取り扱い、言語ポリシー
 
 ---
 
@@ -70,5 +87,5 @@
 
 - 一次情報: 3 件（Anthropic ブログ 2 / PDF 1）
 - 二次情報: 2 件（frameworks 1 / topics 1）
-- プレイブック: 1 件
+- プレイブック: 3 件（setup / claude-md / ingestion）
 - 未取り込みベンダー: GitHub Spec Kit / AWS AI-DLC
