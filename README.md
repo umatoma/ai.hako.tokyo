@@ -12,7 +12,7 @@ AI を活用した**ソフトウェア開発**および**各種業務**（デザ
 
 ## ここから読む
 
-訪問者の進行に沿った 4 フェーズに整理してある。エントリが増えるときは既存フェーズに追加するだけ。
+訪問者の進行に沿った 4 フェーズに整理してある。エントリが増えるときは既存フェーズに追加するだけ。以下は**実際にコンテンツがあるもの**のみ。業務領域・ベンダー別の入口（枠だけのものも含む）は下の「[業務領域別の入口](#業務領域別の入口)」「[ベンダー/ツール別の入口](#ベンダーツール別の入口)」を参照。
 
 ### 1. まず始める（実践プレイブック）
 
@@ -69,24 +69,31 @@ AI を活用した**ソフトウェア開発**および**各種業務**（デザ
 
 詳細な規約（frontmatter・命名・PDF 取り扱い）は [`CLAUDE.md`](CLAUDE.md) に集約してある。
 
-## ステータス
+## 業務領域別の入口
 
-### 業務領域別の進捗
+各業務領域での AI 活用に関する整理ノート (`topics/`) と実践レシピ (`playbooks/`) の入口。枠だけのディレクトリも README で扱う範囲を明示してある。
 
-| 領域 | 状態 |
-|---|---|
-| software-development | 稼働中（Anthropic 系の取り込みベース） |
-| design / marketing / sales / hr / cross | 枠のみ（README で意図を明示済み、コンテンツ待ち） |
+| 領域 | topics（横断トピック） | playbooks（実践手順） | 状態 |
+|---|---|---|---|
+| ソフトウェア開発 | [`topics/software-development/`](topics/software-development/) | [`playbooks/software-development/`](playbooks/software-development/) | 稼働中（Anthropic 系） |
+| デザイン | [`topics/design/`](topics/design/) | [`playbooks/design/`](playbooks/design/) | 枠のみ |
+| マーケティング | [`topics/marketing/`](topics/marketing/) | [`playbooks/marketing/`](playbooks/marketing/) | 枠のみ |
+| 営業 | [`topics/sales/`](topics/sales/) | [`playbooks/sales/`](playbooks/sales/) | 枠のみ |
+| 人事 | [`topics/hr/`](topics/hr/) | [`playbooks/hr/`](playbooks/hr/) | 枠のみ |
+| 業務横断 | [`topics/cross/`](topics/cross/) | — | 枠のみ |
+| このリポ運用 | — | [`playbooks/knowledge-base/`](playbooks/knowledge-base/) | 稼働中 |
 
-### ベンダー/ツール別の進捗
+## ベンダー/ツール別の入口
 
-| 対象 | 状態 |
-|---|---|
-| Anthropic（Claude / Claude Code） | 取り込み済み |
-| Google（Gemini / NotebookLM / NanoBanana） | 枠のみ |
-| GitHub Spec Kit | 枠のみ |
-| AWS AI-DLC | 枠のみ |
-| Dify | 枠のみ |
-| n8n | 枠のみ |
+一次情報 (`sources/`) と整理ノート (`frameworks/`) の入口。
+
+| 対象 | sources（一次情報） | frameworks（整理ノート） | 状態 |
+|---|---|---|---|
+| Anthropic（Claude / Claude Code） | [`sources/anthropic/`](sources/anthropic/) | [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md) | 取り込み済み |
+| Google（Gemini / NotebookLM / NanoBanana） | [`sources/google/`](sources/google/) | — | 枠のみ |
+| GitHub Spec Kit | [`sources/github/spec-kit/`](sources/github/spec-kit/) | — | 枠のみ |
+| AWS AI-DLC | [`sources/aws/ai-dlc/`](sources/aws/ai-dlc/) | — | 枠のみ |
+| Dify | [`sources/dify/`](sources/dify/) | — | 枠のみ |
+| n8n | [`sources/n8n/`](sources/n8n/) | — | 枠のみ |
 
 ベンダー横断の比較・業務領域別のノートが育つほど [`topics/`](topics/) [`playbooks/`](playbooks/) の価値が出る設計。
