@@ -6,6 +6,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Coding Agent（Claude Code、GitHub Spec Kit、AWS AI-DLC など）を活用したソフトウェア開発に関する知見を蓄積・整理するナレッジベース。インターネット上の重要な情報源をローカルに取り込み、整理・要約したノートと並べて管理する。
 
+## まず読むファイル
+
+- [`INDEX.md`](INDEX.md) — 現在リポジトリに何があるかの一覧（規約より「現状」を知りたいときはこちら）
+- 本ファイル `CLAUDE.md` — どこに何を置くかの規約
+- [`playbooks/ingest-source-from-web.md`](playbooks/ingest-source-from-web.md) — 新規取り込みの実践手順
+- [`_templates/`](_templates/) — 新規ノートのコピー元テンプレート
+
 ## 言語
 
 - ユーザーとのやり取りは常に日本語で行う。
@@ -77,11 +84,14 @@ related_sources:
 
 ## 情報を取り込むときの作業フロー
 
+完全な手順とチェックリストは [`playbooks/ingest-source-from-web.md`](playbooks/ingest-source-from-web.md) を参照。概要だけここに示す：
+
 1. `WebFetch` で対象ページを取得する。
-2. 内容を日本語に翻訳し、構造を保ったまま `sources/<vendor>/<category>/` に frontmatter 付きで保存する。
-3. 元ページから PDF（ホワイトペーパー・プレイブック等）がリンクされていれば、その PDF も取り込む（次節「PDF の取り扱い」参照）。元ページ側 frontmatter の `related_docs` に PDF の Markdown 変換版へのリンクを追加する。
-4. 既存の `frameworks/` または `topics/` ノートを更新、または新規作成し、`related_sources` でリンクする。
-5. 古くなった情報を見つけたら frontmatter の `updated` / `captured_at` を更新するか、新バージョンとして別ファイルを追加する。
+2. 内容を日本語に翻訳し、構造を保ったまま `sources/<vendor>/<category>/` に frontmatter 付きで保存する（テンプレ: [`_templates/source-blog.md`](_templates/source-blog.md)）。
+3. 元ページから PDF（ホワイトペーパー・プレイブック等）がリンクされていれば、その PDF も取り込む（次節「PDF の取り扱い」参照、テンプレ: [`_templates/source-pdf.md`](_templates/source-pdf.md)）。元ページ側 frontmatter の `related_docs` に PDF の Markdown 変換版へのリンクを追加する。
+4. 既存の `frameworks/` または `topics/` ノートを更新、または新規作成し（テンプレ: [`_templates/framework-or-topic.md`](_templates/framework-or-topic.md)）、`related_sources` でリンクする。
+5. [`INDEX.md`](INDEX.md) に新規ノートを追記する。
+6. 古くなった情報を見つけたら frontmatter の `updated` / `captured_at` を更新するか、新バージョンとして別ファイルを追加する。
 
 ## PDF の取り扱い
 
@@ -102,6 +112,7 @@ related_sources:
 ## やらないこと
 
 - 推測でノートを書かない。出典が辿れない記述は載せない。
+- **URL を推測で補わない。** 原文（特に PDF）からハイパーリンクの実体まで取れていない場合、リンクは作らず「**テキスト**」のみで残し、節の冒頭に「原文にはハイパーリンクが付いている」旨を注記する。
 - 同じ内容を `frameworks/` と `topics/` の両方に重複させない。片方に書いてもう片方からリンクする。
 - 大量の生コピーを `frameworks/` / `topics/` 配下に置かない（それは `sources/` の役割）。
 - 翻訳と称して要約にすり替えない。要約する場合は冒頭で明示する。

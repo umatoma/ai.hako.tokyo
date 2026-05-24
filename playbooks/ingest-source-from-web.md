@@ -1,0 +1,104 @@
+---
+title: Web 上の記事・PDF を sources/ に取り込む手順
+updated: 2026-05-24
+tags: [ingestion, workflow, webfetch, pdf, translation]
+related_sources:
+  - sources/anthropic/blog/2026-05-20-unreasonable-effectiveness-of-html.md
+  - sources/anthropic/docs/the-founders-playbook.md
+---
+
+# Web 上の記事・PDF を sources/ に取り込む手順
+
+ブログ記事やホワイトペーパーなど、外部 Web ソースを `sources/` 配下へ取り込むときの実践手順。CLAUDE.md の規約（言語・frontmatter・PDF 取り扱い）が前提。
+
+## 使う場面
+
+- Anthropic / GitHub / AWS などの公式ブログを参照したい
+- ホワイトペーパー・電子書籍などの PDF を後で読み返したい
+- 二次情報ノート（frameworks/topics）の出典として固定したい
+
+## 手順（ブログ記事のみの場合）
+
+1. **WebFetch で取得**
+
+   ```
+   WebFetch(url=記事 URL, prompt="本文を見出し構造・段落・リスト・引用を保ったまま Markdown で抽出。著者名・公開日・タイトルを含む。要約しない。")
+   ```
+
+2. **保存先と命名**
+   - パス: `sources/<vendor>/<category>/YYYY-MM-DD-slug.md`（例: `sources/anthropic/blog/2026-05-20-unreasonable-effectiveness-of-html.md`）
+   - 日付は**公開日**ベース。不明なら取得日
+
+3. **frontmatter を付ける**
+   - テンプレ: [`_templates/source-blog.md`](../_templates/source-blog.md) をコピー
+   - 必須: `title` / `title_original` / `source_url` / `captured_at` / `published_at` / `author` / `original_language` / `tags`
+
+4. **日本語へ翻訳**
+   - 構造（見出し・段落・リスト・コード）を保つ
+   - 要約しない（要約するなら冒頭に明記）
+   - 訳に迷う術語は原語を括弧書きで併記（例：「文脈窓 (context window)」）
+   - **本文から取れなかった URL を推測で補わない**（後述の落とし穴参照）
+
+5. **`INDEX.md` の sources セクションに追記**
+
+## 手順（PDF を含む場合）
+
+ブログ記事中に PDF（ホワイトペーパー・プレイブック等）へのリンクがある場合は、ブログ本体に加えて PDF も取り込む。
+
+1. **WebFetch に PDF の URL を渡す**
+
+   PDF のテキスト抽出は失敗するが、ツールがバイナリをローカルに保存し、メッセージにそのパスを返す（例: `/Users/.../tool-results/webfetch-*.pdf`）。
+
+2. **Read tool でページ単位に読む**
+
+   ```
+   Read(file_path=<上記ローカルパス>, pages="1-20")
+   Read(file_path=<上記ローカルパス>, pages="21-36")
+   ```
+
+   - 1 回あたり**最大 20 ページ**
+   - PDF は画像として返るので、視覚的に内容を把握しながら Markdown 化
+
+3. **`sources/<vendor>/docs/` に Markdown として保存**
+   - パス: `sources/<vendor>/docs/<slug>.md`
+   - テンプレ: [`_templates/source-pdf.md`](../_templates/source-pdf.md)
+   - ページ区切りは `<!-- page: N -->` のコメントで明示
+   - 図やイラストは `[Figure: ページ N — 概要]` の形で位置と内容だけ残す（再現はオリジナル PDF を参照）
+   - 章構造・見出し・リスト・コード・表は保つ
+   - 長い PDF には冒頭にアンカーリンク付きの目次を作る
+
+4. **元ブログ側の frontmatter に `related_docs:` を追記**
+
+   ```yaml
+   related_docs:
+     - sources/<vendor>/docs/<slug>.md
+   ```
+
+5. **PDF バイナリはリポジトリに保存しない**
+   - WebFetch のローカルキャッシュは自動で消える
+   - 必要なら frontmatter の `source_url` から再取得できる
+
+## 二次情報への波及
+
+一次情報を取り込んだら、二次情報を更新する：
+
+1. **既存の `frameworks/` / `topics/` で関連ノートを探す**
+   - 関連があれば `related_sources:` に追記し、本文も更新
+2. **新規に作るなら、テンプレ** [`_templates/framework-or-topic.md`](../_templates/framework-or-topic.md) **をコピー**
+3. **`INDEX.md` を更新**
+
+## 落とし穴チェックリスト
+
+- [ ] **推測 URL を入れていないか** — PDF からハイパーリンクの実体まで取れていない場合、URL を捏造せず「**テキスト**」のみで残し、節の冒頭に「原文 PDF にはハイパーリンクが付いている」旨を注記する
+- [ ] **PDF を `.pdf` のまま置いていないか** — 必ず `.md` に変換
+- [ ] **要約と翻訳をすり替えていないか** — 構造を保った翻訳が原則。要約するなら冒頭に明示
+- [ ] **frontmatter の `source_url` は実体か** — 「原文に戻る」唯一の経路なので嘘を書かない
+- [ ] **`related_docs` / `related_sources` のパスは相対パスで実在するか** — 移動・改名のたびに切れる
+- [ ] **`INDEX.md` を更新したか**
+- [ ] **CLAUDE.md の規約に違反していないか** — `git status` で他のファイルを変えていないか確認
+
+## 関連
+
+- [CLAUDE.md](../CLAUDE.md) — 言語・frontmatter・PDF 取り扱いの規約
+- [`_templates/`](../_templates/) — 取り込み用テンプレート
+- [INDEX.md](../INDEX.md) — 取り込み後に必ず更新する一覧
