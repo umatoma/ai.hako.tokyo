@@ -104,6 +104,6 @@ related_sources:
 
 ## 関連
 
-- [`setup-claude-code-in-new-repo.md`](./setup-claude-code-in-new-repo.md) — `CLAUDE.md` を含む初期セットアップ全体
+- [`01-claude-codeを導入する.md`](./01-claude-codeを導入する.md) — `CLAUDE.md` を含む初期セットアップ全体
 - [`frameworks/anthropic-claude-code.md`](../frameworks/anthropic-claude-code.md) — Claude Code を「永続的協働者」として使うための原則
 - [`sources/anthropic/docs/the-founders-playbook.md`](../sources/anthropic/docs/the-founders-playbook.md) — 原典（MVP 章）

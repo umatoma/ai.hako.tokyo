@@ -10,14 +10,14 @@
 
 | やりたいこと | 読むもの |
 |---|---|
-| 新しいリポに Claude Code を導入する | [`playbooks/setup-claude-code-in-new-repo.md`](playbooks/setup-claude-code-in-new-repo.md) |
-| `CLAUDE.md` を書く / 育てる | [`playbooks/write-effective-claude-md.md`](playbooks/write-effective-claude-md.md) |
+| 新しいリポに Claude Code を導入する | [`playbooks/01-claude-codeを導入する.md`](playbooks/01-claude-codeを導入する.md) |
+| `CLAUDE.md` を書く / 育てる | [`playbooks/02-claude-mdを書く.md`](playbooks/02-claude-mdを書く.md) |
 | Claude のサーフェス（Chat/Cowork/Code）を使い分ける | [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md) |
 | Claude Code の出力を HTML / Markdown で使い分ける | [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md) と [元記事](sources/anthropic/blog/2026-05-20-unreasonable-effectiveness-of-html.md) |
 | アイデア / MVP / Launch / Scale 段階で何を優先するか | [`topics/ai-native-startup-lifecycle.md`](topics/ai-native-startup-lifecycle.md) |
-| スコープクリープを防ぐ | [`topics/ai-native-startup-lifecycle.md`](topics/ai-native-startup-lifecycle.md) MVP 章 ＋ [`playbooks/setup-claude-code-in-new-repo.md`](playbooks/setup-claude-code-in-new-repo.md) ステップ 3 |
+| スコープクリープを防ぐ | [`topics/ai-native-startup-lifecycle.md`](topics/ai-native-startup-lifecycle.md) MVP 章 ＋ [`playbooks/01-claude-codeを導入する.md`](playbooks/01-claude-codeを導入する.md) ステップ 3 |
 | エージェント時代の検証・確証バイアス対策 | [`topics/ai-native-startup-lifecycle.md`](topics/ai-native-startup-lifecycle.md) Idea 章 ＋ [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md) の「やってはいけないこと」 |
-| 新しい記事・PDF をこのリポに取り込む | [`playbooks/ingest-source-from-web.md`](playbooks/ingest-source-from-web.md) |
+| 新しい記事・PDF をこのリポに取り込む | [`playbooks/03-外部情報を取り込む.md`](playbooks/03-外部情報を取り込む.md) |
 
 ---
 
@@ -62,9 +62,9 @@
 
 ## playbooks/ — 実践用手順
 
-- [`setup-claude-code-in-new-repo.md`](playbooks/setup-claude-code-in-new-repo.md) — Claude Code を新規・既存リポに導入するときの初期セットアップ手順
-- [`write-effective-claude-md.md`](playbooks/write-effective-claude-md.md) — `CLAUDE.md` の書き方・育て方・アンチパターン
-- [`ingest-source-from-web.md`](playbooks/ingest-source-from-web.md) — ブログ・PDF を `sources/` に取り込む手順とチェックリスト
+- [`01-claude-codeを導入する.md`](playbooks/01-claude-codeを導入する.md) — Claude Code を新規・既存リポに導入するときの初期セットアップ手順
+- [`02-claude-mdを書く.md`](playbooks/02-claude-mdを書く.md) — `CLAUDE.md` の書き方・育て方・アンチパターン
+- [`03-外部情報を取り込む.md`](playbooks/03-外部情報を取り込む.md) — ブログ・PDF を `sources/` に取り込む手順とチェックリスト
 
 ---
 

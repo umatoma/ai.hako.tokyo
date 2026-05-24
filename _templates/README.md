@@ -8,7 +8,7 @@
 | [`source-pdf.md`](./source-pdf.md) | PDF を Markdown 化して `sources/<vendor>/docs/` に保存するとき |
 | [`framework-or-topic.md`](./framework-or-topic.md) | `frameworks/` または `topics/` の二次情報ノートを作るとき |
 
-使い方は [`playbooks/ingest-source-from-web.md`](../playbooks/ingest-source-from-web.md) 参照。
+使い方は [`playbooks/03-外部情報を取り込む.md`](../playbooks/03-外部情報を取り込む.md) 参照。
 
 ## 命名規約
 
