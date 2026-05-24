@@ -8,6 +8,9 @@
 - `anthropic/docs/` — Claude / Claude Code の公式ドキュメント
 - `github/spec-kit/` — GitHub Spec Kit（仕様駆動開発ツールキット）に関するドキュメント・ブログ
 - `aws/ai-dlc/` — AWS AI Development Lifecycle に関する資料
+- `google/` — Gemini / NotebookLM / NanoBanana など Google の AI プロダクト
+- `dify/` — Dify（LLM アプリ開発プラットフォーム）
+- `n8n/` — n8n（オープンソースのワークフロー自動化ツール）
 - `others/` — 上記に当てはまらないもの。たまったらベンダー別に切り出す
 
 ## 取り込みルール
