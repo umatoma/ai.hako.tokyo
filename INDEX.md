@@ -8,15 +8,29 @@
 
 ## ユースケース別（やりたいこと → 読むもの）
 
+README.md と同じ 4 フェーズで整理（**まず始める / 判断する / 原典で確認する / このリポを育てる**）。原典セクションは下の `sources/` 一覧と重複するため省略。
+
+### 1. まず始める（実践）
+
 | やりたいこと | 読むもの |
 |---|---|
 | 新しいリポに Claude Code を導入する | [`playbooks/01-claude-codeを導入する.md`](playbooks/01-claude-codeを導入する.md) |
 | `CLAUDE.md` を書く / 育てる | [`playbooks/02-claude-mdを書く.md`](playbooks/02-claude-mdを書く.md) |
+
+### 2. 判断する（使い分け・原則）
+
+| やりたいこと | 読むもの |
+|---|---|
 | Claude のサーフェス（Chat/Cowork/Code）を使い分ける | [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md) |
-| Claude Code の出力を HTML / Markdown で使い分ける | [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md) と [元記事](sources/anthropic/blog/2026-05-20-unreasonable-effectiveness-of-html.md) |
+| Claude Code の出力を HTML / Markdown で使い分ける | [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md#claude-code-出力の選び方html-vs-markdown) |
 | アイデア / MVP / Launch / Scale 段階で何を優先するか | [`topics/ai-native-startup-lifecycle.md`](topics/ai-native-startup-lifecycle.md) |
 | スコープクリープを防ぐ | [`topics/ai-native-startup-lifecycle.md`](topics/ai-native-startup-lifecycle.md) MVP 章 ＋ [`playbooks/01-claude-codeを導入する.md`](playbooks/01-claude-codeを導入する.md) ステップ 3 |
 | エージェント時代の検証・確証バイアス対策 | [`topics/ai-native-startup-lifecycle.md`](topics/ai-native-startup-lifecycle.md) Idea 章 ＋ [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md) の「やってはいけないこと」 |
+
+### 3. このリポを育てる（貢献）
+
+| やりたいこと | 読むもの |
+|---|---|
 | 新しい記事・PDF をこのリポに取り込む | [`playbooks/03-外部情報を取り込む.md`](playbooks/03-外部情報を取り込む.md) |
 
 ---

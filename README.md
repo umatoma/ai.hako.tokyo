@@ -10,18 +10,46 @@
 
 ナレッジを溜めるだけのリポではなく、**訪問者が次のアクションを取れる**ことを目的にしている。
 
-## ここから読む（やりたいこと別）
+## ここから読む
 
-| あなたが今やりたいこと | まず読むファイル |
+訪問者の進行に沿った 4 フェーズに整理してある。エントリが増えるときは既存フェーズに追加するだけ。
+
+### 1. まず始める（実践プレイブック）
+
+「明日から手を動かす」ためのレシピ。
+
+| やりたいこと | 読むファイル |
 |---|---|
-| 新しいリポに Claude Code を導入したい | [`playbooks/01-claude-codeを導入する.md`](playbooks/01-claude-codeを導入する.md) |
-| `CLAUDE.md` の書き方を知りたい | [`playbooks/02-claude-mdを書く.md`](playbooks/02-claude-mdを書く.md) |
-| Claude Code・Chat・Cowork のどれをいつ使うか | [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md) |
-| アイデア / MVP / Launch / Scale の段階別に AI をどう使うか | [`topics/ai-native-startup-lifecycle.md`](topics/ai-native-startup-lifecycle.md) |
-| Claude Code から HTML で成果物を出すべき場面を知りたい | [`sources/anthropic/blog/2026-05-20-unreasonable-effectiveness-of-html.md`](sources/anthropic/blog/2026-05-20-unreasonable-effectiveness-of-html.md) |
-| AI ネイティブなスタートアップの原典に当たりたい | [`sources/anthropic/docs/the-founders-playbook.md`](sources/anthropic/docs/the-founders-playbook.md) |
-| 自分が見つけた記事をこのリポに取り込みたい | [`playbooks/03-外部情報を取り込む.md`](playbooks/03-外部情報を取り込む.md) |
-| 現在何があるか一覧で見たい | [`INDEX.md`](INDEX.md) |
+| 新規・既存リポに Claude Code を導入する | [`playbooks/01-claude-codeを導入する.md`](playbooks/01-claude-codeを導入する.md) |
+| `CLAUDE.md` を書く・育てる | [`playbooks/02-claude-mdを書く.md`](playbooks/02-claude-mdを書く.md) |
+
+### 2. 判断する（使い分け・原則）
+
+複数の選択肢から「どれを選ぶか」の指針。
+
+| 判断したいこと | 読むファイル |
+|---|---|
+| Claude Code / Chat / Cowork のどれをいつ使うか | [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md) |
+| Idea / MVP / Launch / Scale の段階別に AI で何を優先するか | [`topics/ai-native-startup-lifecycle.md`](topics/ai-native-startup-lifecycle.md) |
+| Claude Code の出力を HTML / Markdown で使い分ける | [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md#claude-code-出力の選び方html-vs-markdown) |
+
+### 3. 原典で確認する
+
+二次情報に書かれた主張の根拠を辿りたいとき。
+
+| 読みたい原典 | 読むファイル |
+|---|---|
+| The Founder's Playbook（PDF 全 36 ページの和訳） | [`sources/anthropic/docs/the-founders-playbook.md`](sources/anthropic/docs/the-founders-playbook.md) |
+| Claude Code: HTML の不合理なまでの有効性（元ブログ） | [`sources/anthropic/blog/2026-05-20-unreasonable-effectiveness-of-html.md`](sources/anthropic/blog/2026-05-20-unreasonable-effectiveness-of-html.md) |
+
+### 4. このリポを育てる（貢献）
+
+学んだことを追加する側に回るとき。
+
+| やりたいこと | 読むファイル |
+|---|---|
+| 自分が見つけた記事・PDF をこのリポに取り込む | [`playbooks/03-外部情報を取り込む.md`](playbooks/03-外部情報を取り込む.md) |
+| 現在何があるか一覧で見る | [`INDEX.md`](INDEX.md) |
 
 ## ディレクトリの役割
 
