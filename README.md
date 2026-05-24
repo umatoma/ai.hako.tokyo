@@ -1,6 +1,6 @@
 # ai.hako.tokyo
 
-Coding Agent（**Claude Code** / **GitHub Spec Kit** / **AWS AI-DLC** など）を使ったソフトウェア開発を、自分たちの仕事に**実際に適用する**ためのナレッジベース。
+**Coding Agent**（Claude Code など）と、それを活かす**開発手法・フレームワーク**（GitHub Spec Kit / AWS AI-DLC など）を使ったソフトウェア開発を、自分たちの仕事に**実際に適用する**ためのナレッジベース。
 
 ## このリポジトリで得られるもの
 

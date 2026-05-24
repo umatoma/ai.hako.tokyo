@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## このリポジトリの目的
 
-Coding Agent（Claude Code、GitHub Spec Kit、AWS AI-DLC など）を活用したソフトウェア開発に関する知見を蓄積・整理するナレッジベース。インターネット上の重要な情報源をローカルに取り込み、整理・要約したノートと並べて管理する。
+Coding Agent（Claude Code など）と、それを活かす開発手法・フレームワーク（GitHub Spec Kit、AWS AI-DLC など）に関する知見を蓄積・整理するナレッジベース。インターネット上の重要な情報源をローカルに取り込み、整理・要約したノートと並べて管理する。
 
 ## まず読むファイル（編集者向け）
 
