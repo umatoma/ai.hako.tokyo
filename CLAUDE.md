@@ -108,8 +108,9 @@ related_sources:
 2. 内容を日本語に翻訳し、構造を保ったまま `sources/<vendor>/<category>/` に frontmatter 付きで保存する（テンプレ: [`_templates/source-blog.md`](_templates/source-blog.md)）。
 3. 元ページから PDF（ホワイトペーパー・プレイブック等）がリンクされていれば、その PDF も取り込む（次節「PDF の取り扱い」参照、テンプレ: [`_templates/source-pdf.md`](_templates/source-pdf.md)）。元ページ側 frontmatter の `related_docs` に PDF の Markdown 変換版へのリンクを追加する。
 4. 既存の `frameworks/` または `topics/` ノートを更新、または新規作成し（テンプレ: [`_templates/framework-or-topic.md`](_templates/framework-or-topic.md)）、`related_sources` でリンクする。
-5. [`INDEX.md`](INDEX.md) に新規ノートを追記する。
-6. 古くなった情報を見つけたら frontmatter の `updated` / `captured_at` を更新するか、新バージョンとして別ファイルを追加する。
+5. [`INDEX.md`](INDEX.md) に新規ノートを追記する（「現在何があるか」を反映）。
+6. [`README.md`](README.md) を更新する（「何から読むべきか」の入口を反映）。**新ベンダー追加・新 frameworks ノート作成・新業務領域の稼働時はほぼ必ず必要**。詳細な判定基準は [`playbooks/knowledge-base/01-外部情報を取り込む.md`](playbooks/knowledge-base/01-外部情報を取り込む.md#readmemd-の更新トリガー) を参照。
+7. 古くなった情報を見つけたら frontmatter の `updated` / `captured_at` を更新するか、新バージョンとして別ファイルを追加する。
 
 ## PDF の取り扱い
 

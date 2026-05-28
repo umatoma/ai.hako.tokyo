@@ -1,6 +1,6 @@
 # ai.hako.tokyo
 
-AI を活用した**ソフトウェア開発**および**各種業務**（デザイン・マーケティング・営業・人事 など）を、自分たちの仕事に**実際に適用する**ためのナレッジベース。**Coding Agent**（Claude Code）、**開発手法・フレームワーク**（GitHub Spec Kit、AWS AI-DLC）、**個別ツール**（Dify、n8n、NotebookLM、Gemini、NanoBanana など）を横断的に扱う。
+AI を活用した**ソフトウェア開発**および**各種業務**（デザイン・マーケティング・営業・人事 など）を、自分たちの仕事に**実際に適用する**ためのナレッジベース。**Coding Agent**（Claude Code）、**開発手法・フレームワーク**（GitHub Spec Kit、AWS AI-DLC、GSD など）、**個別ツール**（Dify、n8n、NotebookLM、Gemini、NanoBanana など）を横断的に扱う。
 
 ## このリポジトリで得られるもの
 
@@ -32,15 +32,24 @@ AI を活用した**ソフトウェア開発**および**各種業務**（デザ
 | Claude Code / Chat / Cowork のどれをいつ使うか | [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md) |
 | Idea / MVP / Launch / Scale の段階別に AI で何を優先するか | [`topics/software-development/ai-native-startup-lifecycle.md`](topics/software-development/ai-native-startup-lifecycle.md) |
 | Claude Code の出力を HTML / Markdown で使い分ける | [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md#claude-code-出力の選び方html-vs-markdown) |
+| GitHub Spec Kit とは何か / どこに効くか | [`frameworks/github-spec-kit.md`](frameworks/github-spec-kit.md) |
+| AWS AI-DLC とは何か / Mob 様式と Bolts | [`frameworks/aws-ai-dlc.md`](frameworks/aws-ai-dlc.md) |
+| GSD (Get Shit Done Redux) の 6 コマンドループとは | [`frameworks/open-gsd-get-shit-done-redux.md`](frameworks/open-gsd-get-shit-done-redux.md) |
+| **Spec Kit / AI-DLC / GSD を使い分ける** | [`topics/software-development/ai-sdlc-methodologies-compared.md`](topics/software-development/ai-sdlc-methodologies-compared.md) |
 
 ### 3. 原典で確認する
 
-二次情報に書かれた主張の根拠を辿りたいとき。
+二次情報に書かれた主張の根拠を辿りたいとき。代表的なものだけ。全件は [`INDEX.md`](INDEX.md) を参照。
 
 | 読みたい原典 | 読むファイル |
 |---|---|
 | The Founder's Playbook（PDF 全 36 ページの和訳） | [`sources/anthropic/docs/the-founders-playbook.md`](sources/anthropic/docs/the-founders-playbook.md) |
 | Claude Code: HTML の不合理なまでの有効性（元ブログ） | [`sources/anthropic/blog/2026-05-20-unreasonable-effectiveness-of-html.md`](sources/anthropic/blog/2026-05-20-unreasonable-effectiveness-of-html.md) |
+| GitHub Spec Kit リポジトリ README | [`sources/github/spec-kit/readme.md`](sources/github/spec-kit/readme.md) |
+| Spec-Driven Development メソドロジー解説 | [`sources/github/spec-kit/spec-driven.md`](sources/github/spec-kit/spec-driven.md) |
+| AWS AI-DLC 発表記事（"central collaborator"） | [`sources/aws/ai-dlc/2025-07-31-ai-driven-development-life-cycle.md`](sources/aws/ai-dlc/2025-07-31-ai-driven-development-life-cycle.md) |
+| AI-DLC ワークフローリポジトリ README | [`sources/aws/ai-dlc/aidlc-workflows-readme.md`](sources/aws/ai-dlc/aidlc-workflows-readme.md) |
+| GSD (Get Shit Done Redux) リポジトリ README | [`sources/open-gsd/get-shit-done-redux/readme.md`](sources/open-gsd/get-shit-done-redux/readme.md) |
 
 ### 4. このリポを育てる（貢献）
 
@@ -75,7 +84,7 @@ AI を活用した**ソフトウェア開発**および**各種業務**（デザ
 
 | 領域 | topics（横断トピック） | playbooks（実践手順） | 状態 |
 |---|---|---|---|
-| ソフトウェア開発 | [`topics/software-development/`](topics/software-development/) | [`playbooks/software-development/`](playbooks/software-development/) | 稼働中（Anthropic 系） |
+| ソフトウェア開発 | [`topics/software-development/`](topics/software-development/) | [`playbooks/software-development/`](playbooks/software-development/) | 稼働中（Anthropic / Spec Kit / AI-DLC / GSD） |
 | デザイン | [`topics/design/`](topics/design/) | [`playbooks/design/`](playbooks/design/) | 枠のみ |
 | マーケティング | [`topics/marketing/`](topics/marketing/) | [`playbooks/marketing/`](playbooks/marketing/) | 枠のみ |
 | 営業 | [`topics/sales/`](topics/sales/) | [`playbooks/sales/`](playbooks/sales/) | 枠のみ |
@@ -90,9 +99,10 @@ AI を活用した**ソフトウェア開発**および**各種業務**（デザ
 | 対象 | sources（一次情報） | frameworks（整理ノート） | 状態 |
 |---|---|---|---|
 | Anthropic（Claude / Claude Code） | [`sources/anthropic/`](sources/anthropic/) | [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md) | 取り込み済み |
+| GitHub Spec Kit | [`sources/github/spec-kit/`](sources/github/spec-kit/) | [`frameworks/github-spec-kit.md`](frameworks/github-spec-kit.md) | 取り込み済み |
+| AWS AI-DLC | [`sources/aws/ai-dlc/`](sources/aws/ai-dlc/) | [`frameworks/aws-ai-dlc.md`](frameworks/aws-ai-dlc.md) | 取り込み済み |
+| GSD (open-gsd / Get Shit Done Redux) | [`sources/open-gsd/`](sources/open-gsd/) | [`frameworks/open-gsd-get-shit-done-redux.md`](frameworks/open-gsd-get-shit-done-redux.md) | 取り込み済み |
 | Google（Gemini / NotebookLM / NanoBanana） | [`sources/google/`](sources/google/) | — | 枠のみ |
-| GitHub Spec Kit | [`sources/github/spec-kit/`](sources/github/spec-kit/) | — | 枠のみ |
-| AWS AI-DLC | [`sources/aws/ai-dlc/`](sources/aws/ai-dlc/) | — | 枠のみ |
 | Dify | [`sources/dify/`](sources/dify/) | — | 枠のみ |
 | n8n | [`sources/n8n/`](sources/n8n/) | — | 枠のみ |
 
