@@ -23,6 +23,15 @@ README.md と同じ 4 フェーズで整理（**まず始める / 判断する /
 |---|---|
 | Claude のサーフェス（Chat/Cowork/Code）を使い分ける | [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md) |
 | Claude Code の出力を HTML / Markdown で使い分ける | [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md#claude-code-出力の選び方html-vs-markdown) |
+| Spec-Driven Development とは何か / 4 フェーズの流れ | [`frameworks/github-spec-kit.md`](frameworks/github-spec-kit.md) |
+| 仕様駆動でコンスティチューションを使う意味 | [`frameworks/github-spec-kit.md`](frameworks/github-spec-kit.md#コンスティチューション-constitution--不変原則による規律) |
+| Spec Kit を導入すべきシナリオ（0→1 / N→N+1 / レガシー） | [`frameworks/github-spec-kit.md`](frameworks/github-spec-kit.md#特に効く-3-つの場面) |
+| AWS AI-DLC とは何か / 3 フェーズと Bolts | [`frameworks/aws-ai-dlc.md`](frameworks/aws-ai-dlc.md) |
+| Mob Elaboration / Mob Construction とは | [`frameworks/aws-ai-dlc.md`](frameworks/aws-ai-dlc.md#1-サイクルのインタラクションパターン) |
+| GSD (Get Shit Done Redux) の 6 コマンドループ | [`frameworks/open-gsd-get-shit-done-redux.md`](frameworks/open-gsd-get-shit-done-redux.md) |
+| コンテキスト腐敗 (context rot) と並列波実行 | [`frameworks/open-gsd-get-shit-done-redux.md`](frameworks/open-gsd-get-shit-done-redux.md#なぜ効くか--3-つの問題と-gsd-の答え) |
+| **Spec Kit / AI-DLC / GSD を使い分ける** | [`topics/software-development/ai-sdlc-methodologies-compared.md`](topics/software-development/ai-sdlc-methodologies-compared.md) |
+| 3 メソドロジーの共通アンチパターン | [`topics/software-development/ai-sdlc-methodologies-compared.md`](topics/software-development/ai-sdlc-methodologies-compared.md#典型的なアンチパターン横断) |
 | アイデア / MVP / Launch / Scale 段階で何を優先するか | [`topics/software-development/ai-native-startup-lifecycle.md`](topics/software-development/ai-native-startup-lifecycle.md) |
 | スコープクリープを防ぐ | [`topics/software-development/ai-native-startup-lifecycle.md`](topics/software-development/ai-native-startup-lifecycle.md) MVP 章 ＋ [`playbooks/software-development/01-claude-codeを導入する.md`](playbooks/software-development/01-claude-codeを導入する.md) ステップ 3 |
 | エージェント時代の検証・確証バイアス対策 | [`topics/software-development/ai-native-startup-lifecycle.md`](topics/software-development/ai-native-startup-lifecycle.md) Idea 章 ＋ [`frameworks/anthropic-claude-code.md`](frameworks/anthropic-claude-code.md) の「やってはいけないこと」 |
@@ -56,15 +65,28 @@ README.md と同じ 4 フェーズで整理（**まず始める / 判断する /
 
 ### GitHub
 
-（未取り込み）
+#### spec-kit
 
-- 想定: `sources/github/spec-kit/` に GitHub Spec Kit 関連を追加予定
+- [`readme.md`](sources/github/spec-kit/readme.md) — 公式リポジトリ README。CLI コマンド、4 フェーズ、Extensions/Presets、9 条項、詳細プロセス（Taskify 例）
+- [`spec-driven.md`](sources/github/spec-kit/spec-driven.md) — SDD の哲学・ワークフロー・コンスティチューション 9 条項・テンプレートが LLM を制約する仕組み（中核ドキュメント）
+- [`docs-home.md`](sources/github/spec-kit/docs-home.md) — 公式ドキュメントサイトのトップ。コミュニティ統計と代替プロセス (AIDE/Canon/Product Forge/...)
+- [`installation.md`](sources/github/spec-kit/installation.md) — インストール手順（uv / pipx / Shell vs PowerShell / Air-Gapped）
+- [`2025-09-02-spec-driven-development-announcement.md`](sources/github/spec-kit/2025-09-02-spec-driven-development-announcement.md) — GitHub Blog 発表記事（"intent is the source of truth"）
 
 ### AWS
 
-（未取り込み）
+#### ai-dlc
 
-- 想定: `sources/aws/ai-dlc/` に AWS AI Development Lifecycle 関連を追加予定
+- [`2025-07-31-ai-driven-development-life-cycle.md`](sources/aws/ai-dlc/2025-07-31-ai-driven-development-life-cycle.md) — AWS DevOps Blog 発表記事。AI-DLC の 2 つの設計次元、3 フェーズ、Mob Elaboration/Construction、Bolts/Units of Work
+- [`2025-11-29-open-sourcing-adaptive-workflows.md`](sources/aws/ai-dlc/2025-11-29-open-sourcing-adaptive-workflows.md) — OSS 化ブログ。3 つの解こうとする課題（画一性・深さ欠如・過剰自動化）と Workflow Scaffolds
+- [`2025-11-29-building-with-ai-dlc-using-amazon-q-developer.md`](sources/aws/ai-dlc/2025-11-29-building-with-ai-dlc-using-amazon-q-developer.md) — Amazon Q Developer で川渡りパズルを作るウォークスルー。`aidlc-docs/` の生成成果物が一望できる
+- [`aidlc-workflows-readme.md`](sources/aws/ai-dlc/aidlc-workflows-readme.md) — 公式リポジトリ README。プラットフォーム別セットアップ（Kiro/Q/Cursor/Cline/Claude Code/Copilot/Codex）、信条 5 つ、Extensions 仕組み、補助ツール
+
+### open-gsd
+
+#### get-shit-done-redux
+
+- [`readme.md`](sources/open-gsd/get-shit-done-redux/readme.md) — 公式リポジトリ README。6 コマンドループ（Init/Discuss/Plan/Execute/Verify/Ship）、コンテキスト腐敗対策、並列波実行、`.planning/` 永続成果物、15 ランタイム互換性、open-gsd への移行経緯
 
 ### Dify
 
@@ -83,6 +105,11 @@ README.md と同じ 4 フェーズで整理（**まず始める / 判断する /
 ## frameworks/ — ベンダー/ツール別の整理ノート
 
 - [`anthropic-claude-code.md`](frameworks/anthropic-claude-code.md) — Chat / Claude Cowork / Claude Code のサーフェス選択、HTML 出力の指針、CLAUDE.md 運用のお作法
+- [`github-spec-kit.md`](frameworks/github-spec-kit.md) — Spec-Driven Development の 4 フェーズ (Spec→Plan→Tasks→Implement)、コンスティチューション 9 条項、Extensions/Presets、適用シナリオ
+- [`aws-ai-dlc.md`](frameworks/aws-ai-dlc.md) — AI-Driven Development Life Cycle の 3 フェーズ（Inception/Construction/Operations）、Mob Elaboration/Construction、Workflow Scaffolds、信条 5 つ
+- [`open-gsd-get-shit-done-redux.md`](frameworks/open-gsd-get-shit-done-redux.md) — GSD の 6 コマンドループ、コンテキスト腐敗対策、並列波実行、`.planning/` 永続成果物
+
+> 3 メソドロジーの横断比較は [`topics/software-development/ai-sdlc-methodologies-compared.md`](topics/software-development/ai-sdlc-methodologies-compared.md) に集約してある。
 
 ---
 
@@ -91,6 +118,7 @@ README.md と同じ 4 フェーズで整理（**まず始める / 判断する /
 ### software-development/
 
 - [`ai-native-startup-lifecycle.md`](topics/software-development/ai-native-startup-lifecycle.md) — 4 段階モデル（Idea/MVP/Launch/Scale）の俯瞰。現状は Anthropic 単一視点
+- [`ai-sdlc-methodologies-compared.md`](topics/software-development/ai-sdlc-methodologies-compared.md) — Spec Kit / AWS AI-DLC / GSD の横断比較。中心概念・フェーズ構造・規律強制・協業様式・並列実行・対象規模など、使い分けの目安まで
 
 ### design / marketing / sales / hr / cross
 
@@ -132,8 +160,8 @@ README.md と同じ 4 フェーズで整理（**まず始める / 判断する /
 
 ## 統計（参考）
 
-- 一次情報: 3 件（Anthropic ブログ 2 / PDF 1）
-- 二次情報: 2 件（frameworks 1 / topics 1）
+- 一次情報: 13 件（Anthropic ブログ 2 / PDF 1、GitHub spec-kit 5、AWS ai-dlc 4、open-gsd 1）
+- 二次情報: 6 件（frameworks 4 / topics 2）
 - プレイブック: 3 件（software-development 2 / knowledge-base 1）
 - 業務領域: software-development が稼働、design/marketing/sales/hr/cross は枠のみ
-- ベンダー/ツール: Anthropic が稼働、Google/GitHub/AWS/Dify/n8n は枠のみ
+- ベンダー/ツール: Anthropic / GitHub (spec-kit) / AWS (ai-dlc) / open-gsd (GSD) が稼働、Google/Dify/n8n は枠のみ
